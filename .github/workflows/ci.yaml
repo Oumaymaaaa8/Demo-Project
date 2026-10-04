@@ -17,6 +17,6 @@ jobs:
     - name: generate-timestamp-tag
       run: echo "VERSION=$(date +'%y-%m-%d-%H%M%S')" >> $GITHUB_ENV
     - name: build-and-push-Image
-      run:
+      run: |
         docker build -t ${{secrets.DOCKERHUB_USERNAME}}/flask-hello:${{env.VERSION}} .
         docker push ${{secrets.DOCKERHUB_USERNAME}}/flask-hello:${{env.VERSION}} 
