@@ -19,4 +19,4 @@ jobs:
     - name: build-and-push-Image
       run: |
         docker build -t ${{secrets.DOCKERHUB_USERNAME}}/flask-hello:${{env.VERSION}} .
-        docker push ${{secrets.DOCKERHUB_USERNAME}}/flask-hello:${{env.VERSION}} 
+        docker push ${{secrets.DOCKERHUB_USERNAME}}/flask-hello:${{env.VERSION}}
